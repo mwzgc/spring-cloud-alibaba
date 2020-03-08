@@ -1,0 +1,10 @@
+[
+  {
+    "resource": "sentinel_test",
+    "controlBehavior": 0,
+    "count": 60,
+    "grade": 1,
+    "limitApp": "default",
+    "strategy": 0
+  }
+]
