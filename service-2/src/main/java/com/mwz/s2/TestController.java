@@ -23,6 +23,9 @@ public class TestController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
+    @Autowired
+    private MyService myService;
+
     // @PostConstruct
     // public void init() {
     // restTemplate1.setErrorHandler(new ResponseErrorHandler() {
@@ -37,6 +40,12 @@ public class TestController {
     // }
     // });
     // }
+
+    @GetMapping("/addUser")
+    public String addUser() {
+        myService.addUser();
+        return "success";
+    }
 
     @GetMapping("/echo-rest/{str}")
     public String rest(@PathVariable String str) {
